@@ -1,0 +1,30 @@
+{
+    "name": "gustavo/worker-mailer",
+    "description": "Trabalhador que ficara encarregado de enviar e-mails no meu servidor",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Gustavo\\WorkerMailer\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php ./src/index.php",
+        "test": [
+            "Composer\\Config::disableProcessTimeout",
+            "vendor/bin/phpunit __tests__"
+        ],
+        "test:watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "phpunit-watcher watch __tests__"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Gustavo Souza",
+            "email": "gustavosouzacco@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "spatie/phpunit-watcher": "^1.23"
+    }
+}
